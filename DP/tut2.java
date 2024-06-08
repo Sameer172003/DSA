@@ -1,4 +1,4 @@
-// Frog jump
+// Frog jump(Minimum Energy Required)
 
 import java.util.*;
 public class tut2 {
