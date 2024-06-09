@@ -1,4 +1,4 @@
-// Frog jump with k distance
+// Frog jump with k jumps
 
 import java.util.*;
 public class tut3 {
