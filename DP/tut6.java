@@ -12,10 +12,10 @@ public class tut6 {
         if(dp[i][j] != -1){
             return dp[i][j];
         }
-        int up=helper(i-1, j, dp);
-        int left=helper(i, j-1, dp);
+        int down=helper(i-1, j, dp);
+        int right=helper(i, j-1, dp);
 
-        return dp[i][j]=up+left;
+        return dp[i][j]=down+right;
     }
     public static int count(int m,int n){
         int dp[][] = new int[m][n];
