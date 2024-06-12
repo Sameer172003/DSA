@@ -8,19 +8,19 @@ public class tut9 {
         }
     }
     public static void zeores(int arr[],int n){
-        int j=-1;
-        for(int i=0;i<n;i++){
-            if(arr[i] == 0){
-                j=i;
-                break;
+        int nz=0;
+        int z=0;
+        while(nz < n){
+            if(arr[nz] != 0){
+                int temp=arr[nz];
+                arr[nz]=arr[z];
+                arr[z]=temp;
+
+                nz++;
+                z++;
             }
-        }
-        for(int i=j+1;i<n;i++){
-            if(arr[i] != 0){
-                int temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-                j++;
+            else{
+                nz++;
             }
         }
     }

@@ -3,14 +3,14 @@
 import java.util.*;
 public class tut4 {
     public static int dupliacte(int arr[],int n){
-        int i=0;
-        for(int j=1;j<n;j++){
-            if(arr[i] != arr[j]){
-                arr[i+1]=arr[j];
-                i++;
+        int j=0;
+        for(int i=1;i<n;i++){
+            if(arr[j] != arr[i]){
+                j++;
+                arr[j]=arr[i];
             }
         }
-        return (i+1);
+        return (j+1);
     }
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
