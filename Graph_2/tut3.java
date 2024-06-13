@@ -12,7 +12,6 @@ public class tut3 {
                 dfs(vis, adj, i);
             }
         }
-        
         return pro;
     }
     public static void dfs(int vis[], ArrayList<ArrayList<Integer>> adj, int node) {
