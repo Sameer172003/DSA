@@ -26,6 +26,9 @@ public class tut4 {
         front=front.next;
         return temp;
     }
+    public int peek(){
+        return front.data;
+    }
     public static void main(String args[]){
         tut4 sol=new tut4();
         sol.add(2);
