@@ -1,7 +1,6 @@
 // Implementation of queue using stacks
 
 import java.util.Stack;
-
 public class tut6 {
     static Stack <Integer> input = new Stack <> ();
     static Stack <Integer> output = new Stack <> ();
