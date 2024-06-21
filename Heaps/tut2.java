@@ -1,49 +1,48 @@
-// Implementation of Min Heap 
+// Implementation of Max Heap 
 
-public class tut1{
+public class tut2 {
     static int capacity;
     static int size;
     static int arr[]=new int[1000];
-    tut1(int cap){
+    tut2(int cap){
         size=0;
         capacity=cap;
     }
-    static int parent(int i){
+    public static int parent(int i){
         return (i-1)/2;
     }
-    static int left(int i){
+    public static int left(int i){
         return (2*i+1);
     }
-    static int right(int i){
+    public static int right(int i){
         return (2*i+2);
     }
     public void insert(int data){
         size++;
         int i=size-1;
         arr[i]=data;
-
-        while(i != 0 && arr[parent(i)] > arr[i]){
+        while(i != 0 && arr[parent(i)] < arr[i]){
             int temp=arr[i];
             arr[i]=arr[parent(i)];
             arr[parent(i)]=temp;
             i=parent(i);
         }
     }
-    public static void heapify(int i){
+    public static void heapify(int i,int arr[],int size){
         int li=left(i);
         int ri=right(i);
-        int small=i;
-        if(li<size && arr[li]<arr[small]){
-            small=li;
+        int greater=i;
+        if(li<size && arr[li] > arr[greater]){
+            greater=li;
         }
-        if(ri<size && arr[ri]<arr[small]){
-            small=ri;
+        if(ri<size && arr[ri] > arr[greater]){
+            greater=ri;
         }
-        if(small != i){
+        while(greater != i){
             int temp=arr[i];
-            arr[i]=arr[small];
-            arr[small]=temp;
-            heapify(small);
+            arr[i]=arr[greater];
+            arr[greater]=temp;
+            heapify(greater,arr,size);
         }
     }
     public int getMin(){
@@ -60,7 +59,7 @@ public class tut1{
         int temp=arr[0];
         arr[0]=arr[size-1];
         size--;
-        heapify(0);
+        heapify(0,arr,size);
         return temp;
     }
     public void decreaseKey(int i,int data){
@@ -76,29 +75,27 @@ public class tut1{
         decreaseKey(i,Integer.MIN_VALUE);
         extractMin();
     }
-    public static void buildHeap(int arr[]){
-        for(int i=(size-2)/2;i>=0;i--){
-            heapify(i);
+    public static void buildHeap(int arr[],int size){
+        for(int i=(size/2)-1;i>=0;i--){
+            heapify(i, arr, size);
         }
     }
-    public void print(){
+    public void print() {
         for (int i = 1; i <= size / 2; i++) {
-            System.out.print(" PARENT : " + arr[i] + " LEFT CHILD : " + arr[2 * i]
-                + " RIGHT CHILD :" + arr[2 * i + 1]);
+            System.out.print(arr[i] + ": L- " + arr[2 * i] + " R- " + arr[2 * i + 1]);
             System.out.println();
         }
     }
     public static void main(String args[]){
-        tut1 minHeap=new tut1(15);
-        minHeap.insert(5);
-        minHeap.insert(3);
-        minHeap.insert(17);
-        minHeap.insert(10);
-        minHeap.insert(84);
-        minHeap.insert(19);
-        minHeap.insert(6);
-        minHeap.insert(22);
-        minHeap.insert(9);
-        minHeap.print();
+        tut2  maxHeap=new tut2(25);
+        maxHeap.insert(1);
+        maxHeap.insert(4);
+        maxHeap.insert(2);
+        maxHeap.insert(5);
+        maxHeap.insert(13);
+        maxHeap.insert(6);
+        maxHeap.insert(17);
+
+        maxHeap.print();
     }
 }
