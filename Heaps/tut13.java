@@ -18,13 +18,20 @@ public class tut13 {
             maxHeap.add(minHeap.poll());
         }
     }
-    public static double getMedian(int arr[]){
+    public static double getMedian(){
         if(minHeap.size() == maxHeap.size()){
             return minHeap.peek()/2.0 + maxHeap.peek()/2.0;
         }
         return maxHeap.peek();
     }
     public static void main(String args[]){
-        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            int a=sc.nextInt();
+            add(a);
+            System.out.println(getMedian());
+        }
+        sc.close();
     }
 }
