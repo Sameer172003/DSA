@@ -15,7 +15,7 @@ public class tut3 {
         temp.remove(temp.size()-1);
     }
     public static ArrayList<ArrayList<Integer>> subset(int arr[]){
-        ArrayList<Integer> temp=new ArrayList<>();;
+        ArrayList<Integer> temp=new ArrayList<>();
         ArrayList<ArrayList<Integer>> ans=new ArrayList<>();
 
         helper(0, arr, temp, ans);
