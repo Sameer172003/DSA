@@ -29,11 +29,11 @@ public class tut7 {
         return ans;
 	}
     public static void main(String args[]){
-        String s="abc";
+        String s="ABC";
         List<String> ans = new ArrayList<>();
         ans.addAll(generatePermutations(s));
         for(int i=0;i<ans.size();i++){
-            System.out.print(ans.get(i)+" ");
+            System.out.println(ans.get(i)+" ");
         }
     }
 }
