@@ -9,7 +9,7 @@ public class tut11 {
                 continue;
             }
             temp.add(arr[i]);
-            helper(idx+1, arr, temp, ans);
+            helper(i+1, arr, temp, ans);
             temp.remove(temp.size()-1);
         }
     }
