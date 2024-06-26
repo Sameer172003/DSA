@@ -1,4 +1,4 @@
-// Convert Array to LinkedList
+// Count LinkedList
 
 class Node{
     int data;
@@ -8,7 +8,7 @@ class Node{
         this.next=null;
     }
 }
-public class tut1{
+public class tut2 {
     public static Node convert(int arr[]){
         Node head=new Node(arr[0]);
         Node move=head;
@@ -19,12 +19,18 @@ public class tut1{
         }
         return head;
     }
-    public static void main(String args[]){
-        int arr[]={1,2,3,4,5};
-        Node head=convert(arr);
-        for(int i=0;i<arr.length;i++){
-            System.out.print(head.data+" ");
-            head=head.next;
+    public static int count(Node head){
+        int cnt=0;
+        Node temp=head;
+        while (temp != null) {
+            temp=temp.next;
+            cnt++;
         }
+        return cnt;
+    }
+    public static void main(String args[]){
+        int arr[]={1,2,4,5};
+        Node head=convert(arr);
+        System.out.println(count(head));
     }
 }
