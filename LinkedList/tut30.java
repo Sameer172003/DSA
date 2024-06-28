@@ -1,7 +1,6 @@
 // Clone a linked list with next and random pointer
 
 import java.util.HashMap;
-
 class Node{
     int data;
     Node next,random;
