@@ -37,8 +37,7 @@ public class tut33 {
         while(temp.next != null){
             temp=temp.next;
         }
-        Node curr=temp.prev;
-        curr.next=null;
+        temp.prev.next=null;
         temp.prev=null;
 
         return head;
