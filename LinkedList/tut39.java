@@ -1,7 +1,6 @@
-// 
+// Find pairs with given sum in doubly linked list
 
 import java.util.ArrayList;
-
 class Node{
     int data;
     Node next;
