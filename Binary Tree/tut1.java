@@ -12,7 +12,6 @@ class Node{
 }
 public class tut1{
     static Node root;
-
     tut1() {
         root = null;
     }
