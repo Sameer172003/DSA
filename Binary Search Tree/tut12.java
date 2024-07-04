@@ -52,7 +52,7 @@ public class tut12 {
         tree.root.left=new Node(1);
         tree.root.right=new Node(3);
         int sum=5;
-        
+
         System.out.println(isPairPresent(root, sum));
     }
 }
