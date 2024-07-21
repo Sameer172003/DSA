@@ -1,8 +1,8 @@
-// Largest Rectangle in Histogram
+// Sum of subarray minimum
 
 import java.util.*;
-public class tut25 {
-    public static int histogram(int arr[]){
+public class tut29 {
+    public static int minimum(int arr[]){
         int n=arr.length;
         int nsr[]=new int[n];
         int nsl[]=new int[n];
@@ -32,14 +32,17 @@ public class tut25 {
             }
             sc.push(i);
         }
-        int area=0;
+        long ans=0;
+        int mod=(int)1e9+7;
+
         for(int i=0;i<n;i++){
-            area=Math.max(area,arr[i]*(nsr[i]-nsl[i]-1));
+            ans=ans+(long)(i-nsl[i])*(nsr[i]-i)%mod*arr[i]%mod;
+            ans=ans%mod;
         }
-        return area;
+        return (int)ans;
     }
     public static void main(String args[]){
-        int arr[]={2,1,5,6,2,3};
-        System.out.println(histogram(arr));
+        int arr[]={3,1,2,4};
+        System.out.println(minimum(arr));
     }
 }
