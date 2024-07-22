@@ -42,10 +42,10 @@ public class tut36 {
         while(temp.next != null){
             temp=temp.next;
         }
-        Node back=temp.prev;
-        Node newnode=new Node(val, temp, back);
-        back.next=newnode;
-        temp.prev=newnode;
+        // Node back=temp.prev;
+        Node newnode=new Node(val, null, temp);
+        temp.next=newnode;
+        // temp.prev=newnode;
 
         return head;
     }
