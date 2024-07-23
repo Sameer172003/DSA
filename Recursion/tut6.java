@@ -24,6 +24,7 @@ public class tut6 {
         List<Integer> sl=new ArrayList<>();
         for(int i=0;i<arr.length;i++){
             sl.add(arr[i]);
+            Collections.sort(sl);
         }
         helper(sl, ans, 0);
         return ans;
