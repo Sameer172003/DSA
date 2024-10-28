@@ -22,7 +22,7 @@ public class tut6 {
     public static List<List<Integer>> permutation(int arr[]){
         List<List<Integer>> ans=new ArrayList<>();
         List<Integer> sl=new ArrayList<>();
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<arr.length;i++){   
             sl.add(arr[i]);
             Collections.sort(sl);
         }
